@@ -1,4 +1,5 @@
 package Padres;
+import progii.juegotablero.model.Jugador;
 
 public class Pieza {
 	private int x, y;
