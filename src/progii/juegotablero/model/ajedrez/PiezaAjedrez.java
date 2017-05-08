@@ -8,7 +8,7 @@ import progii.juegotablero.model.Pieza;
  * @author groman
  *
  */
-abstract class PiezaAjedrez extends Pieza {
+ class PiezaAjedrez extends Pieza {
 	
 	private TipoPiezaAjedrez tipoPieza; 
 	
@@ -21,8 +21,17 @@ abstract class PiezaAjedrez extends Pieza {
 		return tipoPieza;
 	}
 
-	abstract public boolean puedeMover(int x, int y, boolean hayC);
-
+		public boolean puedeMover(int x, int y, boolean hayC) {
+		boolean puedeX = x<8 && x>=0;
+		boolean puedeY = y<8 && y>=0;
+		if(puedeX && puedeY){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	 
 	public String toString(){
 		return getTipoPieza() + "_" + getJugador().getNombre(); 
 	}
