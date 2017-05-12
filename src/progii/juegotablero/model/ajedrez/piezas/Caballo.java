@@ -11,7 +11,11 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
+<<<<<<< HEAD
 public class Caballo extends PiezaAjedrez {
+=======
+public class Caballo extends PiezaAjedrez  {
+>>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 
 	/**
 	 * Crea una Caballo pertenenciente a jugador en la posición (x,y) del
@@ -47,11 +51,18 @@ public class Caballo extends PiezaAjedrez {
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
 		System.out.println(toX + " " + (getX() - 2));
+<<<<<<< HEAD
 		return super.puedeMover(toX, toY, hayContrario)
 				&& ((this.getX() - 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY)))
 				|| ((this.getX() + 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY)))
 				|| ((this.getY() + 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)))
 				|| ((this.getY() - 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)));
+=======
+		return super.puedeMover(toX, toY, hayContrario) &&
+				((this.getX() - 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY))) ||
+				((this.getX() + 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY))) ||
+				((this.getY() + 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX))) ||
+				((this.getY() - 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)));
+>>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 	}
-
 }
