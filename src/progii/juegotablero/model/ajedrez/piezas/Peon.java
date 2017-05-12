@@ -5,12 +5,11 @@ import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 
 public class Peon extends PiezaAjedrez {
-
-	public Peon(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.PEON, x, y);
+	
+	public Peon(Jugador jugador, int x, int y) {
+		super(jugador, TipoPiezaAjedrez.PEON, x, y);
 		// TODO Auto-generated constructor stub
 	}
-
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
 		// Comprueba si hay una ficha en las posiciones y+1, x+1 o y-1, x-1 si
