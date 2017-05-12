@@ -7,7 +7,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 public class Rey extends PiezaAjedrez {
 
 	public Rey(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza, x, y);
+		super(jugador, tipoPieza.REY, x, y);
 		// TODO Auto-generated constructor stub
 	}
 
