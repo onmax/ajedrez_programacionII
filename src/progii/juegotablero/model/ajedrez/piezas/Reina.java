@@ -6,10 +6,11 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 
 public class Reina extends PiezaAjedrez {
 
-	@SuppressWarnings("static-access")
-	public Reina(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.REINA, x, y);
+	public Reina(Jugador jugador, int x, int y) {
+		super(jugador, TipoPiezaAjedrez.REINA, x, y);
 	}
+
+	/**
 	/**
 	 * Devuelve si la Reina puede mover a la posicion (toX,toY) habiendo o no contrario en dicha posiciÃ³n. 
 	 * Se debe comprobar si el movimiento se sale del tablero y para ello se debe usar el mÃ©todo puedeMover de la 
