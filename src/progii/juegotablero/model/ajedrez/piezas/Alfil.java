@@ -10,7 +10,6 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
-<<<<<<< HEAD
 public class Alfil extends PiezaAjedrez  {
 
 	/**
@@ -34,16 +33,22 @@ public class Alfil extends PiezaAjedrez  {
 	 * @return true si el movimiento es válido y false e.o.c.
 	 */
 
+	/**
+	 * Devuelve si el Alfil puede mover a la posicion (toX,toY) habiendo o no contrario en dicha posicion. 
+	 * Se debe comprobar si el movimiento se sale del tablero y para ello se debe usar el metodo puedeMover de la 
+	 * clase PiezaAjedrez.
+	 * @param toX Fila destino del movimiento 
+	 * @param toY Columna destino del movimiento
+	 * @param hayContrario true si hay una pieza contraria en la posicion (toX,toY)
+	 * @return true si el movimiento es valido y false e.o.c.
+	 */
+
+	//Se suma la x y la y, si es par el alfil esta en la casilla blanca, si no esta en la negra.
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-		return super.puedeMover(toX, toY, hayContrario) && 
-				((this.getX() + 7 == toX) && (this.getY() + 7 == toY)); 
-=======
-	public Alfil(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.ALFIL, x, y);
-		// TODO Auto-generated constructor stub
->>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
+		return (super.puedeMover(toX, toY, hayContrario) &&( 
+				((this.getX() + this.getY())% 2 ==  0) && ((toX+toY)%2 == 0) //ALFIL BLANCO
+				||((this.getX()+this.getY())%2!=0) && (toX+toY)%2!=0 )); //ALFIL BLAMCO
 	}
-
+	
 }
-
