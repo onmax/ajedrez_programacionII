@@ -31,9 +31,24 @@ public class PiezaAjedrez extends Pieza {
 			return false;
 		}
 	}
+<<<<<<< HEAD
 
 	public String toString() {
 		return getTipoPieza() + "_" + getJugador().getNombre();
+=======
+	 
+	 //---------------Metodo Alternativo-----------------//
+	 @Override
+	public boolean puedeMover(int x, int y, boolean hayC) {
+		 if (x >= 0 && x < 8 && y >= 0 && y < 8) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public String toString(){
+		return getTipoPieza() + "_" + getJugador().getNombre(); 
+>>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
 	}
 
 }

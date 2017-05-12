@@ -10,6 +10,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
+<<<<<<< HEAD
 public class Rey extends PiezaAjedrez  {
 
 	/**
@@ -38,6 +39,11 @@ public class Rey extends PiezaAjedrez  {
 		return super.puedeMover(toX, toY, hayContrario) && 
 				( (this.getX()!=toX && toY == getY()) || 
 				  (this.getY()!= toY && toX == getX()) ); 
+=======
+	public Rey(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
+		super(jugador, tipoPieza.REY, x, y);
+		// TODO Auto-generated constructor stub
+>>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
 	}
 
 }

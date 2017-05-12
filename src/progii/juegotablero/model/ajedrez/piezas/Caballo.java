@@ -10,6 +10,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
+<<<<<<< HEAD
 public class Caballo extends PiezaAjedrez  {
 
 	/**
@@ -41,6 +42,11 @@ public class Caballo extends PiezaAjedrez  {
 				((this.getX() + 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY))) ||
 				((this.getY() + 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX))) ||
 				((this.getY() - 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)));
+=======
+	public Caballo(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
+		super(jugador, tipoPieza.CABALLO, x, y);
+		// TODO Auto-generated constructor stub
+>>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
 	}
 
 }

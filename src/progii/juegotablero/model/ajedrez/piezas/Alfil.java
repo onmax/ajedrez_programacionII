@@ -10,6 +10,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
+<<<<<<< HEAD
 public class Alfil extends PiezaAjedrez  {
 
 	/**
@@ -37,6 +38,11 @@ public class Alfil extends PiezaAjedrez  {
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
 		return super.puedeMover(toX, toY, hayContrario) && 
 				((this.getX() + 7 == toX) && (this.getY() + 7 == toY)); 
+=======
+	public Alfil(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
+		super(jugador, tipoPieza.ALFIL, x, y);
+		// TODO Auto-generated constructor stub
+>>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
 	}
 
 }

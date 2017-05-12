@@ -10,7 +10,12 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
+<<<<<<< HEAD
 public class Reina extends PiezaAjedrez  {
+=======
+	public Reina(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
+		super(jugador, tipoPieza.REINA, x, y);
+>>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
 
 	/**
 	 * Crea una Reina pertenenciente a jugador en la posición (x,y) del tablero
