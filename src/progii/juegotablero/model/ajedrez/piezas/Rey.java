@@ -11,20 +11,22 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  */
 
 
-public class Rey extends PiezaAjedrez  {
+public class Rey extends PiezaAjedrez {
 
 	/**
-	 * Crea una Rey pertenenciente a jugador en la posición (x,y) del tablero
-	 * @param jugador El jugador al que pertenece la pieza
-	 * @param x Fila que ocupa 
-	 * @param y Columna que ocupa
+	 * Crea un rey pertenenciente a jugador en la posiciÃ³n (x,y) del tablero
+	 * 
+	 * @param jugador
+	 *            El jugador al que pertenece la pieza
+	 * @param x
+	 *            Fila que ocupa
+	 * @param y
+	 *            Columna que ocupa
 	 */
-	@SuppressWarnings("static-access")
-	public Rey(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.REY, x, y);
+	public Rey(Jugador jugador, int x, int y) {
+		super(jugador, TipoPiezaAjedrez.REY, x, y);
 		// TODO Auto-generated constructor stub
 	}
-
 	/**
 	 * Devuelve si el Rey puede mover a la posicion (toX,toY) habiendo o no
 	 * contrario en dicha posicion. Se debe comprobar si el movimiento se sale
