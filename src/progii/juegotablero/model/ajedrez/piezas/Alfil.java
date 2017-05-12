@@ -7,7 +7,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 public class Alfil extends PiezaAjedrez {
 
 	public Alfil(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza, x, y);
+		super(jugador, tipoPieza.ALFIL, x, y);
 		// TODO Auto-generated constructor stub
 	}
 
