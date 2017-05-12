@@ -7,7 +7,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 public class Reina extends PiezaAjedrez {
 
 	public Reina(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza, x, y);
+		super(jugador, tipoPieza.REINA, x, y);
 
 	}
 
