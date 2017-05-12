@@ -32,6 +32,15 @@ import progii.juegotablero.model.Pieza;
 		}
 	}
 	 
+	 //---------------Metodo Alternativo-----------------//
+	 @Override
+	public boolean puedeMover(int x, int y, boolean hayC) {
+		 if (x >= 0 && x < 8 && y >= 0 && y < 8) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public String toString(){
 		return getTipoPieza() + "_" + getJugador().getNombre(); 
 	}
