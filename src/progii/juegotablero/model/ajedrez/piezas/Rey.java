@@ -10,7 +10,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
-<<<<<<< HEAD
+
 public class Rey extends PiezaAjedrez  {
 
 	/**
@@ -19,32 +19,31 @@ public class Rey extends PiezaAjedrez  {
 	 * @param x Fila que ocupa 
 	 * @param y Columna que ocupa
 	 */
-	public Rey(Jugador jugador, int x, int y) {
-		super(jugador, TipoPiezaAjedrez.REY, x, y);
-		
+	@SuppressWarnings("static-access")
+	public Rey(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
+		super(jugador, tipoPieza.REY, x, y);
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * Devuelve si la Rey puede mover a la posición (toX,toY) habiendo o no contrario en dicha posición. 
-	 * Se debe comprobar si el movimiento se sale del tablero y para ello se debe usar el método puedeMover de la 
-	 * clase PiezaAjedrez.
-	 * @param toX Fila destino del movimiento 
-	 * @param toY Columna destino del movimiento
-	 * @param hayContrario true si hay una pieza contraria en la posición (toX,toY)
-	 * @return true si el movimiento es válido y false e.o.c.
+	 * Devuelve si el Rey puede mover a la posicion (toX,toY) habiendo o no
+	 * contrario en dicha posicion. Se debe comprobar si el movimiento se sale
+	 * del tablero y para ello se debe usar el metodo puedeMover de la clase
+	 * PiezaAjedrez.
+	 * 
+	 * @param toX
+	 *            Fila destino del movimiento
+	 * @param toY
+	 *            Columna destino del movimiento
+	 * @param hayContrario
+	 *            true si hay una pieza contraria en la posicion (toX,toY)
+	 * @return true si el movimiento es valido y false e.o.c.
 	 */
 
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-		return super.puedeMover(toX, toY, hayContrario) && 
-				( (this.getX()!=toX && toY == getY()) || 
-				  (this.getY()!= toY && toX == getX()) ); 
-=======
-	public Rey(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.REY, x, y);
-		// TODO Auto-generated constructor stub
->>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
+		return (super.puedeMover(toX, toY, hayContrario)&&
+				(toX == this.getX() + 1 || toX == this.getX() -1) ||
+				(toY == this.getY()+1 || toY == this.getY()-1));
 	}
-
 }
-
