@@ -10,7 +10,6 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
-<<<<<<< HEAD
 public class Caballo extends PiezaAjedrez  {
 
 	/**
