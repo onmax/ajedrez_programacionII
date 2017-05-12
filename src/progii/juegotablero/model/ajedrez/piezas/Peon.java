@@ -1,6 +1,6 @@
 package progii.juegotablero.model.ajedrez.piezas;
-
 import progii.juegotablero.model.Jugador;
+import progii.juegotablero.model.ajedrez.ControlJugadoresAjedrez;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 
@@ -10,7 +10,6 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
-<<<<<<< HEAD
 public class Peon extends PiezaAjedrez  {
 
 	/**
@@ -36,14 +35,20 @@ public class Peon extends PiezaAjedrez  {
 
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-		return super.puedeMover(toX, toY, hayContrario) && 
-				( (this.getX()!=toX && toY == getY()) || 
-				  (this.getY()!= toY && toX == getX()) ); 
-=======
-	public Peon(Jugador jugador, TipoPiezaAjedrez tipoPieza, int x, int y) {
-		super(jugador, tipoPieza.PEON, x, y);
-		// TODO Auto-generated constructor stub
->>>>>>> 3ed4b9f4068432ff42d2026a67a19e214c889173
+		boolean negro = this.getJugador().getId() == ControlJugadoresAjedrez.NEGRO;
+		if(negro){
+			if(this.getX() == 1){
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() + 2) == toX || (this.getX() + 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() + 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+			}else{
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() + 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() + 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+			}
+		}else{
+			if(this.getX() == 6){
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 2) == toX || (this.getX() - 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+			}else{
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+			}
+		}
 	}
 
 }

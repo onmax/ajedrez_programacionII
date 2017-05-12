@@ -36,8 +36,7 @@ public class Torre extends PiezaAjedrez  {
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
 		return super.puedeMover(toX, toY, hayContrario) && 
-				( (this.getX()!=toX && toY == getY()) || 
-				  (this.getY()!= toY && toX == getX()) ); 
+				((this.getX() != toX && toY == getY()) || (this.getY() != toY && toX == getX())); 
 	}
 
 }
