@@ -11,11 +11,7 @@ import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
  *
  */
 
-<<<<<<< HEAD
-public class Alfil extends PiezaAjedrez {
-=======
 public class Alfil extends PiezaAjedrez  {
->>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 
 	/**
 	 * Crea una Alfil pertenenciente a jugador en la posición (x,y) del tablero
@@ -60,15 +56,7 @@ public class Alfil extends PiezaAjedrez  {
 	//Se suma la x y la y, si es par el alfil esta en la casilla blanca, si no esta en la negra.
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-<<<<<<< HEAD
 		return super.puedeMover(toX, toY, hayContrario)
 				&& ((toX - this.getX() == toY - this.getY() || this.getX() + this.getY() == toY + toX));
 	}
-=======
-		return (super.puedeMover(toX, toY, hayContrario) &&( 
-				((this.getX() + this.getY())% 2 ==  0) && ((toX+toY)%2 == 0) //ALFIL BLANCO
-				||((this.getX()+this.getY())%2!=0) && (toX+toY)%2!=0 )); //ALFIL BLAMCO
-	}
-	
->>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 }
