@@ -4,7 +4,7 @@ import progii.juegotablero.model.Jugador;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 
-<<<<<<< HEAD
+
 /**
  * Clase que representa a la Reina
  * 
@@ -63,18 +63,9 @@ public class Reina extends PiezaAjedrez {
 	
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-<<<<<<< HEAD
 		return super.puedeMover(toX, toY, hayContrario) && ((this.getX() != toX && toY == getY())
 				|| (toX - this.getX() == toY - this.getY() || this.getX() + this.getY() == toY + toX)
 				|| (this.getY() != toY && toX == getX())
 				|| (toX - this.getX() == toY - this.getY() || this.getX() + this.getY() == toY + toX));
-=======
-		return (super.puedeMover(toX, toY, hayContrario) && (this.getX() != toX && toY == getY())
-				|| (this.getY() != toY && toX == getX()) || // Movimiento de la
-															// torre
-				(((this.getX() + this.getY()) % 2 == 0) && ((toX + toY) % 2 == 0) // Movimiento
-																					// Alfil
-						|| ((this.getX() + this.getY()) % 2 != 0) && (toX + toY) % 2 != 0));
->>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 	}
 }
