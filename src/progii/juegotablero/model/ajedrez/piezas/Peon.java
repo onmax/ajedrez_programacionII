@@ -4,7 +4,6 @@ import progii.juegotablero.model.ajedrez.ControlJugadoresAjedrez;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
 
-<<<<<<< HEAD
 /**
  * Clase que representa a la Peon
  * @author groman
@@ -19,17 +18,23 @@ public class Peon extends PiezaAjedrez  {
 	 * @param x Fila que ocupa 
 	 * @param y Columna que ocupa
 	 */
-=======
-public class Peon extends PiezaAjedrez {
-	
->>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 	public Peon(Jugador jugador, int x, int y) {
 		super(jugador, TipoPiezaAjedrez.PEON, x, y);
-		// TODO Auto-generated constructor stub
+		
 	}
+
+	/**
+	 * Devuelve si la Peon puede mover a la posición (toX,toY) habiendo o no contrario en dicha posición. 
+	 * Se debe comprobar si el movimiento se sale del tablero y para ello se debe usar el método puedeMover de la 
+	 * clase PiezaAjedrez.
+	 * @param toX Fila destino del movimiento 
+	 * @param toY Columna destino del movimiento
+	 * @param hayContrario true si hay una pieza contraria en la posición (toX,toY)
+	 * @return true si el movimiento es válido y false e.o.c.
+	 */
+
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-<<<<<<< HEAD
 		boolean negro = this.getJugador().getId() == ControlJugadoresAjedrez.NEGRO;
 		if(negro){
 			if(this.getX() == 1){
@@ -43,22 +48,8 @@ public class Peon extends PiezaAjedrez {
 			}else{
 				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
 			}
-=======
-		// Comprueba si hay una ficha en las posiciones y+1, x+1 o y-1, x-1 si
-		// la hay,
-		// devuelve un true o false en relaccion, a si puede mover a y+1, x+1 o
-		// a
-		// y-1, x-1.
-		if (super.puedeMover(toX + 1, toY + 1, hayContrario) == false
-				&& super.puedeMover(toX - 1, toY - 1, hayContrario) == false) {
-			return super.puedeMover(toX + 1, toY + 1, hayContrario) || super.puedeMover(toX + 1, toY - 1, hayContrario);
-
-			// En caso de que esto no se cumpla, simplemente comprueba que la
-			// pieza pueda mover hacia delante
-		} else {
-			return super.puedeMover(toX, toY, hayContrario) && (toY == this.getY() + 1 && this.getX() == toX);
->>>>>>> bd894945139d1f48534e8e21e4415de5486da226
 		}
 	}
 
 }
+
