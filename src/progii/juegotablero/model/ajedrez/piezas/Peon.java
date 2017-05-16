@@ -40,13 +40,13 @@ public class Peon extends PiezaAjedrez  {
 			if(this.getX() == 1){
 				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() + 2) == toX || (this.getX() + 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() + 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
 			}else{
-				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() + 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() + 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() + 1) == toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() + 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
 			}
 		}else{
 			if(this.getX() == 6){
 				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 2) == toX || (this.getX() - 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
 			}else{
-				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 1)== toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
+				return super.puedeMover(toX, toY, hayContrario) && (((this.getX() - 1) == toX) && this.getY() == toY && !hayContrario) || hayContrario && (this.getX() - 1 == toX && ((this.getY() + 1 == toY)||(this.getY() - 1 == toY))); 
 			}
 		}
 	}
