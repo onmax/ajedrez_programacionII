@@ -3,7 +3,15 @@ package progii.juegotablero.model.ajedrez.piezas;
 import progii.juegotablero.model.Jugador;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
-
+import anotacion.Programacion2;
+@Programacion2 (
+nombreAutor1 = "Maximo",
+apellidoAutor1 = "García Martínez",
+emailUPMAutor1 = "maximo.garcia.martinez@alumnos.upm.es",
+nombreAutor2 = "Javier",
+apellidoAutor2 = "Barragán Haro",
+emailUPMAutor2 = "javier.barragan.haro@alumnos.upm.es"
+)
 /**
  * Clase que representa a la Caballo
  * 
@@ -47,10 +55,8 @@ public class Caballo extends PiezaAjedrez {
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
 		return super.puedeMover(toX, toY, hayContrario)
-				&& ((this.getX() - 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY)))
-				|| ((this.getX() + 2 == toX) && ((this.getY() + 1 == toY) || (this.getY() - 1 == toY)))
-				|| ((this.getY() + 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)))
-				|| ((this.getY() - 2 == toY) && ((this.getX() + 1 == toX) || (this.getX() - 1 == toX)));
+				&& (((this.getX() - 2 == toX || this.getX() + 2 == toX)  && (this.getY() + 1 == toY || this.getY() - 1 == toY))
+				|| ((this.getX() - 1 == toX || this.getX() + 1 == toX)  && (this.getY() + 2 == toY || this.getY() - 2 == toY)));
 	}
 
 }
