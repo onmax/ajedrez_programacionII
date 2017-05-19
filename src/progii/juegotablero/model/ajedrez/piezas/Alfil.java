@@ -3,7 +3,15 @@ package progii.juegotablero.model.ajedrez.piezas;
 import progii.juegotablero.model.Jugador;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
-
+import anotacion.Programacion2;
+@Programacion2 (
+nombreAutor1 = "Maximo",
+apellidoAutor1 = "García Martínez",
+emailUPMAutor1 = "maximo.garcia.martinez@alumnos.upm.es",
+nombreAutor2 = "Javier",
+apellidoAutor2 = "Barragán Haro",
+emailUPMAutor2 = "javier.barragan.haro@alumnos.upm.es"
+)
 /**
  * Clase que representa a la Alfil
  * 
@@ -45,7 +53,7 @@ public class Alfil extends PiezaAjedrez {
 
 	@Override
 	public boolean puedeMover(int toX, int toY, boolean hayContrario) {
-		return super.puedeMover(toX, toY, hayContrario) && (this.getX() != toX && this.getY() != toY)
-				&& ((toX - this.getX() == toY - this.getY() || this.getX() + this.getY() == toY + toX));
+		return super.puedeMover(toX, toY, hayContrario) &&
+				((toX - this.getX() == toY - this.getY()) || (this.getX() + this.getY() == toY + toX));
 	}
 }
