@@ -1,10 +1,18 @@
 package progii.juegotablero.model;
 
+import anotacion.Programacion2;
 import progii.juegotablero.exceptions.MovimientoException;
 import progii.juegotablero.model.Movimiento;
 import stacks.EmptyStackException;
 import stacks.Stack;
-
+@Programacion2 (
+nombreAutor1 = "Maximo",
+apellidoAutor1 = "García Martínez",
+emailUPMAutor1 = "maximo.garcia.martinez@alumnos.upm.es",
+nombreAutor2 = "Javier",
+apellidoAutor2 = "Barragán Haro",
+emailUPMAutor2 = "javier.barragan.haro@alumnos.upm.es"
+)
 public class GestorHistorial {
 	private Stack<Movimiento> pilaDeshacer;
 	private Stack<Movimiento> pilaRehacer;
