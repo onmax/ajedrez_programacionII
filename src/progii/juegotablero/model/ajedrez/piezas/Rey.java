@@ -3,7 +3,15 @@ package progii.juegotablero.model.ajedrez.piezas;
 import progii.juegotablero.model.Jugador;
 import progii.juegotablero.model.ajedrez.PiezaAjedrez;
 import progii.juegotablero.model.ajedrez.TipoPiezaAjedrez;
-
+import anotacion.Programacion2;
+@Programacion2 (
+nombreAutor1 = "Maximo",
+apellidoAutor1 = "García Martínez",
+emailUPMAutor1 = "maximo.garcia.martinez@alumnos.upm.es",
+nombreAutor2 = "Javier",
+apellidoAutor2 = "Barragán Haro",
+emailUPMAutor2 = "javier.barragan.haro@alumnos.upm.es"
+)
 /**
  * Clase que representa a la Rey
  * 
